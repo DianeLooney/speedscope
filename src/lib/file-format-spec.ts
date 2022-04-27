@@ -41,6 +41,7 @@ export namespace FileFormat {
     file?: string
     line?: number
     col?: number
+    meta?: any
   }
 
   export enum ProfileType {

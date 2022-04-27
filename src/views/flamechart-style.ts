@@ -14,6 +14,9 @@ export const getFlamechartStyle = withTheme(theme =>
       left: 0,
       top: 0,
     },
+    metadata: {
+      overflow: 'scroll',
+    },
     minimap: {
       height: Sizes.MINIMAP_HEIGHT,
       borderBottom: `${Sizes.SEPARATOR_HEIGHT}px solid ${theme.fgSecondaryColor}`,
@@ -26,7 +29,7 @@ export const getFlamechartStyle = withTheme(theme =>
       display: 'grid',
       height: Sizes.DETAIL_VIEW_HEIGHT,
       overflow: 'hidden',
-      gridTemplateColumns: '120px 120px 1fr',
+      gridTemplateColumns: '120px 120px 1fr 1fr',
       gridTemplateRows: 'repeat(4, 1fr)',
       borderTop: `${Sizes.SEPARATOR_HEIGHT}px solid ${theme.fgSecondaryColor}`,
       fontSize: FontSize.LABEL,

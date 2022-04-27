@@ -6,6 +6,7 @@ import {Frame, CallTreeNode} from '../lib/profile'
 import {ColorChit} from './color-chit'
 import {Flamechart} from '../lib/flamechart'
 import {useTheme} from './themes/theme'
+import {MetadataView} from './metadata-view'
 
 interface StatisticsTableProps {
   title: string
@@ -118,6 +119,7 @@ export function FlamechartDetailView(props: FlamechartDetailViewProps) {
         formatter={flamechart.formatValue.bind(flamechart)}
       />
       <StackTraceView node={selectedNode} getFrameColor={props.getCSSColorForFrame} />
+      <MetadataView node={selectedNode} />
     </div>
   )
 }

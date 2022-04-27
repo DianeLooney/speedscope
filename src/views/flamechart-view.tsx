@@ -16,6 +16,7 @@ import {ProfileSearchContext} from './search-view'
 import {FlamechartSearchView} from './flamechart-search-view'
 import {getFlamechartStyle} from './flamechart-style'
 import {StatelessComponent} from '../lib/preact-helpers'
+import {MetadataView} from './metadata-view'
 
 export class FlamechartView extends StatelessComponent<FlamechartViewProps> {
   private getStyle() {
@@ -89,6 +90,7 @@ export class FlamechartView extends StatelessComponent<FlamechartViewProps> {
           {this.formatValue(hover.node.getTotalWeight())}
         </span>{' '}
         {hover.node.frame.name}
+        <MetadataView node={hover.node} />
       </Hovertip>
     )
   }
